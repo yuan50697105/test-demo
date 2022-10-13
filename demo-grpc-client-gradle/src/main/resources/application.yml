@@ -1,0 +1,6 @@
+server:
+  port: 8081
+grpc:
+  security:
+    auth:
+      enabled: false

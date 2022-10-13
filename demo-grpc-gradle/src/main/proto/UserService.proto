@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.demo.grpc.user";
+option java_generate_equals_and_hash = true;
+option java_generic_services = true;
+
+message UserAddRequest{
+  string username = 1;
+  string password = 2;
+  optional int32 state = 3;
+}
+message UserResponse{
+  int32 code = 1;
+  string message = 2;
+  repeated string data = 3;
+}
+service UserService{
+  rpc Add(UserAddRequest) returns (UserResponse);
+}

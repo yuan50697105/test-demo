@@ -1,0 +1,5 @@
+rootProject.name = 'demo-dubbo-gradle'
+include 'demo-dubbo-gradle-commons'
+include 'demo-dubbo-gradle-consumer'
+include 'demo-dubbo-gradle-provider'
+

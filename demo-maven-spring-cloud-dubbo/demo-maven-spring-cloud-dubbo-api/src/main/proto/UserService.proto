@@ -1,0 +1,32 @@
+syntax = "proto3";
+package com.example.demo.spring.cloud.dubbo.user;
+
+option java_package = "com.example.demo.spring.cloud.dubbo.user.proto";
+option java_multiple_files = false;
+option java_generate_equals_and_hash = true;
+option java_outer_classname = "UserEntity";
+
+message UserAddRequest{
+  string username = 1;
+  string password = 2;
+}
+message UserUpdateRequest{
+  string username = 1;
+  int64 id = 3;
+}
+
+message UserResponse{
+  message UserDtoResponse{
+    int64 id = 1;
+    string username = 2;
+    int32 state = 3;
+  }
+  repeated UserDtoResponse responseList = 1;
+  optional UserDtoResponse response = 2;
+  string message = 3;
+}
+
+service UserService{
+  rpc add(UserAddRequest) returns (UserResponse);
+  rpc update(UserUpdateRequest) returns (UserResponse);
+}

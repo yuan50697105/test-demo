@@ -1,0 +1,7 @@
+grpc:
+  security:
+    auth:
+      enabled: false
+  netty-server:
+    on-collision-prefer-shaded-netty: true
+

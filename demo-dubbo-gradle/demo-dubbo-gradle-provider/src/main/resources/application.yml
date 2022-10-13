@@ -1,0 +1,11 @@
+dubbo:
+  protocol:
+    name: dubbo
+  #    port: 8000
+  #  registry:
+  #    address: multicast://localhost:8000
+  application:
+    name: ${spring.application.name}
+spring:
+  application:
+    name: demo-dubbo-provider

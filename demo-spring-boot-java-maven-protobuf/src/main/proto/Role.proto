@@ -1,0 +1,12 @@
+syntax = "proto3";
+// 转成java后所在包
+option java_package = "com.example.demo.protobuf.role";
+option java_outer_classname = "RoleProtoBuffer";
+
+message RoleRequest{
+  string name = 1;
+}
+
+message RoleResponse{
+  string name = 1;
+}

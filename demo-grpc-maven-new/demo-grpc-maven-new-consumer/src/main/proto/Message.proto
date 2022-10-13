@@ -1,0 +1,21 @@
+syntax = "proto3";
+option java_package = "com.example.demo.grpc.proto";
+option java_multiple_files = false;
+
+message MessageRequest{
+  string sender = 1;
+  string receiver = 2;
+  string content = 3;
+}
+
+message MessageResponse{
+  bool success = 1;
+  string message = 2;
+}
+
+service MessageService{
+  rpc sendMessage(MessageRequest) returns (MessageResponse);
+  rpc sendMessageStream(stream MessageRequest) returns (stream MessageResponse);
+  rpc sendMessageStream2( MessageRequest) returns (stream MessageResponse);
+  rpc sendMessageStream3(stream MessageRequest) returns(MessageResponse);
+}

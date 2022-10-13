@@ -1,0 +1,17 @@
+syntax = "proto3";
+// 转成java后所在包
+option java_package = "com.example.demo.protobuf";
+// 转成java后的类名
+option java_outer_classname = "MessageUserEntity";
+// 转java后生成一个java文件
+option java_multiple_files = false;
+
+message MessageUserRequest {
+  string username = 1;
+  string password = 2;
+}
+
+message MessageUserResponse {
+  string access_token = 1;
+  string username = 2;
+}

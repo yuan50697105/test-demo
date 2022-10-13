@@ -1,0 +1,4 @@
+rootProject.name = 'demo-grpc-gradle-new'
+include 'demo-grpc-gradle-new-consumer'
+include 'demo-grpc-gradle-new-proviser'
+

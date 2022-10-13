@@ -1,0 +1,8 @@
+rootProject.name = 'demo-gradle-spring-cloud-dubbo'
+include 'demo-gradle-spring-cloud-dubbo-commons'
+include 'demo-gradle-spring-cloud-dubbo-provider'
+include 'demo-gradle-spring-cloud-dubbo-consumer'
+include 'demo-gradle-spring-cloud-dubbo-rds'
+include 'demo-gradle-spring-cloud-dubbo-domain-service'
+include 'demo-gradle-spring-cloud-dubbo-api'
+

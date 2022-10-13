@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: spring-cloud-dubbo-provider
+  #  config:
+  #    import: optional:zookeeper
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+  cloud:
+    zookeeper:
+      discovery:
+        register: true
+        root: services/spring-cloud
+
+
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: zookeeper://localhost:2181
+#  config-center:
+#    address: ${dubbo.registry.address}
+##  monitor:
+##    address: ${dubbo.registry.address}
+#  metadata-report:
+server:
+  port: 9090
+logging:
+  level:
+    org.apache.dubbo: debug
+#    address: ${dubbo.registry.address}

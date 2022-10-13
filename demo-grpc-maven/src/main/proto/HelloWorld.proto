@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package="com.example.demo.grpc.protobuf";
+
+//请求
+message Request {
+  double num1 = 1;
+  double num2 = 2;
+  OperateType opType = 3;
+}
+
+//操作类型
+enum OperateType {
+  Addition = 0;
+  Division = 1;
+  Multiplication = 2;
+  Subtraction = 3;
+}
+message Response {
+  double result = 1;
+}
+
+//定义服务
+service Operate {
+  rpc Calculate (Request) returns (Response);
+}
